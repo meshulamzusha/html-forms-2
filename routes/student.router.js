@@ -28,7 +28,7 @@ router.post('/register', async (req, res) => {
 
 router.get('/students', async (req, res) => {
     try {
-        const students = await User.find();
+        const students = await Student.find();
         res.status(200).json(students)
     } catch (err) {
         console.log('Error fetching user data:', err);

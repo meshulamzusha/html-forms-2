@@ -6,9 +6,9 @@ const studentSchema = new Schema({
     type: String,
     required: true,
   },
-  email:{
-    type:String,
-    required:true,
+  email: {
+    type: String,
+    required: true,
   },
   age: {
     type: Number,
@@ -26,7 +26,10 @@ const studentSchema = new Schema({
     type: Boolean,
     required: true
   },
-  createdAt: Date
+  createdAt: { 
+    type: Date, 
+    default: Date.now 
+  }
 });
 
 export const Student = mongoose.model('Student', studentSchema);
