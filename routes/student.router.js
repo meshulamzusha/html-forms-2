@@ -6,6 +6,8 @@ const router = express.Router();
 
 router.post('/register', async (req, res) => {
     const accept = req.body.termsAccepted == 'on' ? true : false
+    console.log(req.body);
+    
     try {
         const newStudent = new Student({
             name: req.body.name,
